@@ -1,9 +1,9 @@
 # First angular application 
 
-creating a routing module in root app 
+creating a routing module in root app <br>
 `ng generate module app-routing --flat --module=app`
-`--flat` Puts the file in src/app instead of its own folder.
-`--module=app`	Tells the CLI to register it in the imports array of the AppModule. 
+`--flat` Puts the file in src/app instead of its own folder.<br>
+`--module=app`	Tells the CLI to register it in the imports array of the AppModule. <br>
 
 ---
 
