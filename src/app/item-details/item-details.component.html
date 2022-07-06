@@ -1,0 +1,13 @@
+<p>asdfasdfa</p>
+
+<div *ngIf="item">
+    
+    <h2>{{item.name | uppercase}} Details</h2>
+    <div>id {{item.id}}</div>
+
+    <div>
+        <label for="item-name"> Item name</label>
+        <input id="item-name" placeholder="name" [(ngModel)]="item.name">
+        <button type="button" (click)="goBack()">go back</button>
+    </div>
+</div>  

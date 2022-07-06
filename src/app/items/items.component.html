@@ -1,0 +1,39 @@
+<!-- <h2>{{item.name | uppercase}} -->
+<!-- Pipes are a good way to format strings, currency amounts, 
+    dates and other display data. Angular ships with several built-in pipes and you can create your own. -->
+<!-- Details -->
+<!-- </h2> -->
+
+<!-- <div><span>id: </span>{{item.id}}</div> -->
+<!-- <div> -->
+<!-- <label for="name"></label> -->
+
+<!-- [(ngModel)] is Angular's two-way data binding syntax. -->
+<!-- Here it binds the item.name property to the HTML textbox so that data can flow in both directions: -->
+<!-- From the item.name property to the textbox and from the textbox back to the item.name. -->
+<!-- imports for the module added in app.module.ts -->
+<!-- <input id="name" [(ngModel)]="item.name" placeholder="name"> -->
+
+<!-- </div> -->
+
+<h2>Menu Items</h2>
+
+<ul class="items">
+
+    <!--*ngFor; Angular's repeater directive -->
+    <li *ngFor="let item of items">
+
+        <!-- https://angular.io/guide/class-binding -->
+        <!--  [class.some-css-class]="some-condition" angular's css class binding -->
+        <button type="button" [class.selected]="item == selectedItem">
+            <!-- Angular's event binding syntex -->
+            <a routerLink="/detail/{{item.id}}">
+                <span class="badge">{{item.id}}</span>{{item.name}}
+            </a>
+        </button>
+    </li>
+</ul>
+
+<!-- // binding item to selectedItem -->
+<!-- it is a one way data binding -->
+<!-- <app-item-details [item]="selectedItem"></app-item-details> -->
